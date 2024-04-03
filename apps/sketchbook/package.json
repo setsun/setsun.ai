@@ -62,7 +62,7 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "glslify": "^7.1.1",
     "typescript": "^5.3.3",
-    "vite": "^5.0.12",
+    "vite": "^5.0.13",
     "vite-plugin-glsl": "^1.2.1",
     "vite-plugin-glslify": "^2.0.2"
   }
