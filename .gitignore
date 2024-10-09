@@ -35,3 +35,12 @@ yarn-error.log*
 
 # ui
 dist/
+
+
+
+.nx/cache
+.nx/workspace-data
+
+# Next.js
+.next
+out
