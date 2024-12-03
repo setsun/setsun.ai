@@ -1,28 +1,14 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
-  "globalEnv": ["NODE_ENV", "KV_SECURE_URL", "CI", "PORT"],
-  "pipeline": {
+  "tasks": {
     "build": {
-      "dependsOn": ["^build", "^db:generate"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
-    },
-    "dev": {
-      "dependsOn": ["^db:generate"],
-      "cache": false,
-      "persistent": true
-    },
-    "db:generate": {
-      "cache": false
-    },
-    "db:push": {
-      "cache": false
-    },
-    "clean": {
-      "cache": false
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {},
-    "check-types": {},
-    "scripts:generate-previews": {}
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
   }
 }
